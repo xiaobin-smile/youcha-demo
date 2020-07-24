@@ -6,7 +6,7 @@
     <div class="user">
       <div class="userSet">
         <i class="el-icon-user"></i>
-        <span>Admin</span>
+        <span>{{ username }}</span>
         <i class="el-icon-arrow-down"></i>
       </div>
       <i class="el-icon-switch-button"></i>
@@ -15,7 +15,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data(){
+    return{
+      username:""
+    }
+  },
+  mounted(){
+    this.username = this.$local.getVal("user").username
+  }
+};
 </script>
 
 <style lang="less" scoped>
