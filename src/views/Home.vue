@@ -1,91 +1,39 @@
 <template>
   <div class="home">
-    <el-container>
-      <el-header height="70px">
-        <v-header></v-header>
-      </el-header>
-      <el-container>
-        <el-aside width="200px">Aside</el-aside>
-        <el-main>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-            <h1>Main</h1>
-        </el-main>
-      </el-container>
-    </el-container>
+    <v-header></v-header>
+    <v-Navbar></v-Navbar>
+    <div class="main">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
 import vHeader from "@/components/Header.vue";
+import vNavbar from "@/components/Navbar.vue";
+import vMainTitle from "@/components/main/MainTitle.vue";
 export default {
   components: {
     vHeader,
+    vNavbar,
+    vMainTitle
   },
 };
 </script>
 
 <style lang="less" scoped>
-.home {
+.home{
+  width: 100%;
   height: 100%;
-  .el-header {
-    background-color: #b3c0d1;
-  }
-
-  .el-aside {
-    background-color: #d3dce6;
-  }
-
-  .el-main {
-    background-color: #e9eef3;
-    overflow: auto;
-  }
-  .el-container {
-    height: 100%;
+  overflow: hidden;
+  .main{
+    position: absolute;
+    top: 70px;
+    left: 251px;
+    bottom: 0;
+    right: 0;
+    background: #f0f0f0;
+    overflow-y: auto;
   }
 }
 </style>

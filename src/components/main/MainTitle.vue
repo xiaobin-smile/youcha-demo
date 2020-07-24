@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1>title</h1>
+    <div class="maintitle">
+        <span>title</span>
     </div>
 </template>
 
@@ -11,5 +11,10 @@
 </script>
 
 <style lang="less" scoped>
-
+.maintitle{
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+    line-height: 50px;
+    background: #fff;
+}
 </style>
